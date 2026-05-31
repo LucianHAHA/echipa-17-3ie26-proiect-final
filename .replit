@@ -18,3 +18,20 @@ expertMode = true
 [postMerge]
 path = "scripts/post-merge.sh"
 timeoutMs = 20000
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 21702
+externalPort = 3000
+
+[userenv]
+
+[userenv.shared]
+VITE_STRAPI_URL = "https://engaging-friends-0af08400d6.strapiapp.com"
