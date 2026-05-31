@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "title": "Primul meu articol",
+        "content": "Acesta este conținutul articolului tău de test."
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "title": "Al doilea articol",
+        "content": "Totul merge perfect fără server!"
+      }
+    }
+  ]
+}
