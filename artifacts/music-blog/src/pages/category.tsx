@@ -18,8 +18,9 @@ export default function Category() {
     );
   }
 
-  const category = data?.data?.attributes;
-  const articles = category?.articles?.data || [];
+  // Strapi v5: direct pe data.data, fara .attributes
+  const category = data?.data;
+  const articles = category?.articles || [];
 
   return (
     <div className="min-h-screen py-16 bg-background">
@@ -42,7 +43,6 @@ export default function Category() {
             <div className="w-24 h-1 bg-primary mx-auto mt-8 glow-purple" />
           </div>
         )}
-
         {isLoading ? (
           <SkeletonCardGrid count={6} />
         ) : articles.length > 0 ? (
