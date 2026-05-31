@@ -18,7 +18,6 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <HeroSection />
 
-      {/* Recent Articles Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end mb-12">
@@ -59,7 +58,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Categories */}
       <section className="py-20 bg-card border-y border-border">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-display font-bold text-center mb-12 glow-purple">
@@ -75,13 +73,13 @@ export default function Home() {
           ) : featuredCategories.length > 0 ? (
             <div className="flex flex-wrap justify-center gap-4">
               {featuredCategories.map((category) => (
-                <Link key={category.id} href={`/categories/${category.attributes.slug}`}>
+                <Link key={category.id} href={`/categories/${category.slug}`}>
                   <Button 
                     variant="outline" 
                     size="lg" 
                     className="rounded-full border-primary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
-                    {category.attributes.name}
+                    {category.name}
                   </Button>
                 </Link>
               ))}
@@ -90,7 +88,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Analog Gear Spotlight */}
       <section className="py-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
